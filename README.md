@@ -11,6 +11,19 @@ Requires an installation of the python drawBot library (<code>from drawBot impor
 
 Drawbotlab doesn't have an installer or anything like that. To use it, simply place the folder, or a pth file pointing to the folder, in your Python site-packages.
 
+
+# Install
+
+In DrawBot, open the package manager with the menu Python -> Install Python Packages...
+
+Enter the following url `git+https://github.com/connordavenport/drawbotlab` and press `go`.
+
+For drawBot as a command line module, just enter the following terminal command: 
+`pip install git+https://github.com/connordavenport/drawbotlab`
+
+Install instructions are based on Mathieu Reguer's setup for <a href="https://github.com/mathieureguer/drawbotgrid">drawBotGrid</a>
+
+
 ## What’s inside?
 
 ### Color
