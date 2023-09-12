@@ -63,14 +63,19 @@ def ufoText(textString, pos, font, fontSize, showMissing='.notdef', kerning=True
     
     ufoText(u'Your text here.', (0, 0), font=f, fontSize=50, kerning=False)
     """
+    
+    # if font is a path, turn it into an RFont, otherwise leave it
+    if isinstance(font,"str"):
+        font = RFont(font)
+    else:
+        font = font
     # get glyph names
     gnames = _getGlyphNamesFromTextString(textString, font, showMissing)
     # before we begin, get kerning
     # there is probably a better way to do this
     # but for now we will explode kerning once so we don't ahve to 
     if kerning:
-        explodedKerning = font.kerning.copy()
-        explodedKerning.explodeClasses(*_getKernGroups(font.groups))
+        explodedKerning = font.getFlatKerning()
     save()
     # move to the position
     if draw: translate(*pos)
