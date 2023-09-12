@@ -65,7 +65,7 @@ def ufoText(textString, pos, font, fontSize, showMissing='.notdef', kerning=True
     """
     
     # if font is a path, turn it into an RFont, otherwise leave it
-    if isinstance(font,"str"):
+    if isinstance(font,str):
         font = RFont(font)
     else:
         font = font
