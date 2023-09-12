@@ -1,5 +1,5 @@
 from fontTools.pens.basePen import BasePen
-from robofab.objects.objectsRF import RFont, RGlyph
+from fontParts.world import RFont, RGlyph
 from drawBot import *
 
 class DrawBotPen(BasePen):
